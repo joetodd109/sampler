@@ -10,60 +10,71 @@
 
 @implementation ViewController
 
-@synthesize kick;
-@synthesize kickOn;
-
 -(void)
 viewDidLoad
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
-    [kickOn setHidden:true];
+    [_kickOn setAlphaValue:0.0];
+    [_snareOn setAlphaValue:0.0];
+    [_tom setAlphaValue:0.0];
+    [_floor setAlphaValue:0.0];
     
-    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(hitCallback:) name:@"drumHit" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hitCallback:) name:@"drumHit" object:nil];
 }
 
 -(void)
 setRepresentedObject:(id)representedObject
 {
     [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
-
--(void)dealloc
-{
-    //clean up in case viewDidUnload wasn't called (it sometimes isn't)
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [super dealloc];
 }
 
 -(void)
 hitCallback:(NSNotification *)callback
 {
     NSString *drum = callback.object;
-    
-    [self showDrum:drum];
-    
-    //[self performSelector:@selector(hideDrum) withObject:self afterDelay: 0.2];
-    [self hideDrum];
+    [self hitDrum:drum];
 }
 
 -(void)
-showDrum:(NSString *) drum
+hitDrum:(NSString *) drum
 {
     if ([drum isEqualToString:@"Kick"]) {
-        [kick setHidden:true];
-        [kickOn setHidden:false];
+        [_kick setAlphaValue:0.0];
+        [_kickOn setAlphaValue:1.0];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:1.0];
+        [[_kickOn animator] setAlphaValue:0.0];  // fade out
+        [[_kick animator] setAlphaValue:1.0];   // fade in
+        [NSAnimationContext endGrouping];
     }
-}
-
--(void)
-hideDrum
-{
-    [kick setHidden:false];
-    [kickOn setHidden:true];
+    else if ([drum isEqualToString:@"Snare"]) {
+        [_snare setAlphaValue:0.0];
+        [_snareOn setAlphaValue:1.0];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:1.0];
+        [[_snareOn animator] setAlphaValue:0.0];  // fade out
+        [[_snare animator] setAlphaValue:1.0];   // fade in
+        [NSAnimationContext endGrouping];
+    }
+    else if ([drum isEqualToString:@"Tom"]) {
+        [_tom setAlphaValue:0.0];
+        [_tomOn setAlphaValue:1.0];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:1.0];
+        [[_tomOn animator] setAlphaValue:0.0];  // fade out
+        [[_tom animator] setAlphaValue:1.0];   // fade in
+        [NSAnimationContext endGrouping];
+    }
+    else if ([drum isEqualToString:@"Floor"]) {
+        [_floor setAlphaValue:0.0];
+        [_floorOn setAlphaValue:1.0];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:1.0];
+        [[_floorOn animator] setAlphaValue:0.0];  // fade out
+        [[_floor animator] setAlphaValue:1.0];   // fade in
+        [NSAnimationContext endGrouping];
+    }
 }
 
 @end

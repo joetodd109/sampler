@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		778A16BE1B96390100BA357D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BD1B96390100BA357D /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		778A16C01B96390100BA357D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BF1B96390100BA357D /* main.m */; };
-		778A16C31B96390100BA357D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16C21B96390100BA357D /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		778A16C31B96390100BA357D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16C21B96390100BA357D /* ViewController.m */; };
 		778A16C51B96390100BA357D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 778A16C41B96390100BA357D /* Images.xcassets */; };
 		778A16C81B96390100BA357D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 778A16C61B96390100BA357D /* Main.storyboard */; };
 		778A16D41B96390100BA357D /* SamplerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16D31B96390100BA357D /* SamplerTests.m */; };

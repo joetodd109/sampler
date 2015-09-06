@@ -11,10 +11,9 @@
 #import <CoreFoundation/CoreFoundation.h>
 #import <CoreMIDI/CoreMIDI.h>
 
-@interface Sampler : NSObject 
-//
-//+(void)setupMIDI;
-//+(void)loadSamples;
+@interface Sampler : NSObject
 
+-(void)loadSamples;
+-(void)setupMIDI;
 
 @end

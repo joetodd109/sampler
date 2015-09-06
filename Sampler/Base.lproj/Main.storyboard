@@ -673,18 +673,48 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-JL-qeX">
-                                <rect key="frame" x="51" y="42" width="100" height="93"/>
+                                <rect key="frame" x="51" y="20" width="120" height="115"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="uPs-mP-mwf"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQr-8c-OND">
-                                <rect key="frame" x="51" y="42" width="100" height="93"/>
+                                <rect key="frame" x="51" y="20" width="120" height="115"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="VdG-um-gKV"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-NZ-pGP">
+                                <rect key="frame" x="45" y="154" width="77" height="72"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="Il9-Bt-DmF"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-NP-gEl">
+                                <rect key="frame" x="157" y="143" width="65" height="65"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="4d3-bJ-8h8"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dt6-Th-kbH">
+                                <rect key="frame" x="157" y="143" width="65" height="65"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="6jg-gQ-Eve"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-S4-ggq">
+                                <rect key="frame" x="204" y="55" width="73" height="70"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="xww-TG-dQE"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrI-mM-mPx">
+                                <rect key="frame" x="204" y="55" width="73" height="70"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="Xxx-Uh-Hla"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fm-4g-603">
+                                <rect key="frame" x="45" y="154" width="77" height="72"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="ou0-Z0-lAs"/>
                             </imageView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="kick" destination="AQ3-JL-qeX" id="gA9-UE-SM2"/>
-                        <outlet property="kickOn" destination="eQr-8c-OND" id="mew-kX-iGe"/>
+                        <outlet property="floor" destination="2yo-S4-ggq" id="M21-DO-j0w"/>
+                        <outlet property="floorOn" destination="qrI-mM-mPx" id="zrH-Rl-t3u"/>
+                        <outlet property="kick" destination="AQ3-JL-qeX" id="AIf-g3-kYS"/>
+                        <outlet property="kickOn" destination="eQr-8c-OND" id="Luu-Ci-fS3"/>
+                        <outlet property="snare" destination="9Fm-4g-603" id="AMg-cK-du8"/>
+                        <outlet property="snareOn" destination="9Fm-4g-603" id="0NP-w1-cJP"/>
+                        <outlet property="tom" destination="l2a-NP-gEl" id="73X-Fk-mxd"/>
+                        <outlet property="tomOn" destination="Dt6-Th-kbH" id="YMe-H9-dQF"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -14,7 +14,12 @@
 
 @property (strong) IBOutlet NSImageView *kick;
 @property (strong) IBOutlet NSImageView *kickOn;
-
+@property (strong) IBOutlet NSImageView *snare;
+@property (strong) IBOutlet NSImageView *snareOn;
+@property (strong) IBOutlet NSImageView *tom;
+@property (strong) IBOutlet NSImageView *tomOn;
+@property (strong) IBOutlet NSImageView *floor;
+@property (strong) IBOutlet NSImageView *floorOn;
 
 @end
 
