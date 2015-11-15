@@ -14,8 +14,8 @@ MIDIClientRef midiClient;
 MIDIPortRef inputPort;
 MIDIObjectRef endPoint;
 MIDIObjectType foundObj;
-MIDIUniqueID uniqueID = -1669486234;  // edirol
-//MIDIUniqueID uniqueID = -440497731;  // touchpad
+//MIDIUniqueID uniqueID = -1669486234;  // edirol
+MIDIUniqueID uniqueID = -440497731;  // touchpad
 
 NSString *myDeviceName = @"EDIROL FA-66";
 MIDIDeviceRef myDevice = 0;
@@ -32,49 +32,39 @@ NSURL *hiCrashURL;      // 49
 NSMutableArray *samples;
 OSStatus result;
 
+/*
+ * MIDI note callback.
+ */
 static void
 midiInputCallback (const MIDIPacketList *list, void *procRef, void *srcRef)
 {
     const MIDIPacket *packet = &list->packet[0];
     NSLog(@"note = %d, velocity = %d", packet->data[1], packet->data[2]);
     
-    AVAudioPlayer *sample;
     NSString *drumString;
     NSUInteger length = [samples count];
     if (length > 30) {
         [samples removeObjectAtIndex:0];
     }
-    float volume = packet->data[2] / 128.0;
+    //float volume = packet->data[2] / 128.0;
     
     switch (packet->data[1]) {
         case 36:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:kickURL error:nil];
-            [samples addObject:sample];
             drumString = @"Kick";
             break;
         case 38:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:snareURL error:nil];
-            [samples addObject:sample];
             drumString = @"Snare";
             break;
         case 48:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:midTomURL error:nil];
-            [samples addObject:sample];
             drumString = @"Tom";
             break;
         case 45:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:lowTomURL error:nil];
-            [samples addObject:sample];
             drumString = @"Floor";
             break;
         case 46:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:hiHatOpenURL error:nil];
-            [samples addObject:sample];
             drumString = @"HiHat";
             break;
         case 49:
-            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:loCrashURL error:nil];
-            [samples addObject:sample];
             drumString = @"Crash";
             break;
         default:
@@ -83,15 +73,63 @@ midiInputCallback (const MIDIPacketList *list, void *procRef, void *srcRef)
             return;
     }
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumClick" object:drumString];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumHit" object:drumString];
+}
+
+/*
+ * Play Drum Sample
+ */
+-(void)
+playSample:(NSString *) drum amplitude:(float) volume
+{
+    AVAudioPlayer *sample;
+    NSUInteger length = [samples count];
+    
+    // remove old samples from buffer
+    if (length > 30) {
+        [samples removeObjectAtIndex:0];
+    }
+    
+    // add sample data to buffer
+    if ([drum isEqualToString:@"Kick"]) {
+        sample = [[AVAudioPlayer alloc] initWithContentsOfURL:kickURL error:nil];
+        [samples addObject:sample];
+    }
+    else if ([drum isEqualToString:@"Snare"]) {
+            sample = [[AVAudioPlayer alloc] initWithContentsOfURL:snareURL error:nil];
+            [samples addObject:sample];
+    }
+    else if ([drum isEqualToString:@"Tom"]) {
+        sample = [[AVAudioPlayer alloc] initWithContentsOfURL:midTomURL error:nil];
+        [samples addObject:sample];
+    }
+    else if ([drum isEqualToString:@"Floor"]) {
+        sample = [[AVAudioPlayer alloc] initWithContentsOfURL:lowTomURL error:nil];
+        [samples addObject:sample];
+    }
+    else if ([drum isEqualToString:@"HiHat"]) {
+        sample = [[AVAudioPlayer alloc] initWithContentsOfURL:hiHatOpenURL error:nil];
+        [samples addObject:sample];
+    }
+    else if ([drum isEqualToString:@"Crash"]) {
+        sample = [[AVAudioPlayer alloc] initWithContentsOfURL:loCrashURL error:nil];
+        [samples addObject:sample];
+    }
+    else {
+        NSLog(@"MIDI message not recognised");
+        return;
+    }
+    
     [sample setVolume:volume];
     [sample prepareToPlay];
     [sample play];
     //[sample release];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumHit" object:drumString];
 }
 
-
+/*
+ * Initialise MIDI Client.
+ */
 -(void)
 setupMIDI
 {
@@ -126,8 +164,24 @@ setupMIDI
     AVAudioPlayer *hhClosed = [[AVAudioPlayer alloc] initWithContentsOfURL:hiHatClosedURL error:nil];
     AVAudioPlayer *loCrash = [[AVAudioPlayer alloc] initWithContentsOfURL:loCrashURL error:nil];
     AVAudioPlayer *hiCrash = [[AVAudioPlayer alloc] initWithContentsOfURL:hiCrashURL error:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickCallback:) name:@"drumClick" object:nil];
 }
 
+/*
+ * Drum Click Event Handler.
+ */
+-(void)
+clickCallback:(NSNotification *)callback
+{
+    NSString *drum = callback.object;
+    [self playSample:drum amplitude:0.78f];
+}
+
+/*
+ * Loads drum samples from selected directory.
+ * Base directory ~/Music/Samples
+ */
 -(void)
 loadSamples
 {

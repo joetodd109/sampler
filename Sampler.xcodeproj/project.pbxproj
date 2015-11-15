@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7775A99B1BA4DBFD00B8DF8A /* Floor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9921BA4DBFD00B8DF8A /* Floor.wav */; };
+		7775A99C1BA4DBFD00B8DF8A /* HiCrash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9931BA4DBFD00B8DF8A /* HiCrash.wav */; };
+		7775A99D1BA4DBFD00B8DF8A /* HiHatOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9941BA4DBFD00B8DF8A /* HiHatOpen.wav */; };
+		7775A99E1BA4DBFD00B8DF8A /* HitHatClosed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9951BA4DBFD00B8DF8A /* HitHatClosed.wav */; };
+		7775A99F1BA4DBFD00B8DF8A /* Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9961BA4DBFD00B8DF8A /* Kick.wav */; };
+		7775A9A01BA4DBFD00B8DF8A /* LoCrash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9971BA4DBFD00B8DF8A /* LoCrash.wav */; };
+		7775A9A11BA4DBFD00B8DF8A /* Ride.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9981BA4DBFD00B8DF8A /* Ride.wav */; };
+		7775A9A21BA4DBFD00B8DF8A /* Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9991BA4DBFD00B8DF8A /* Snare.wav */; };
+		7775A9A31BA4DBFD00B8DF8A /* Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A99A1BA4DBFD00B8DF8A /* Tom.wav */; };
 		778A16BE1B96390100BA357D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BD1B96390100BA357D /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		778A16C01B96390100BA357D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BF1B96390100BA357D /* main.m */; };
 		778A16C31B96390100BA357D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16C21B96390100BA357D /* ViewController.m */; };
@@ -18,15 +27,6 @@
 		778A16E31B96392D00BA357D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778A16E21B96392D00BA357D /* CoreFoundation.framework */; };
 		778A16E51B96393100BA357D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778A16E41B96393100BA357D /* Foundation.framework */; };
 		778A16EF1B9639B000BA357D /* Sampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16EE1B9639B000BA357D /* Sampler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		778A16FA1B963AC600BA357D /* Floor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F11B963AC600BA357D /* Floor.wav */; };
-		778A16FB1B963AC600BA357D /* HiCrash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F21B963AC600BA357D /* HiCrash.wav */; };
-		778A16FC1B963AC600BA357D /* HiHatOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F31B963AC600BA357D /* HiHatOpen.wav */; };
-		778A16FD1B963AC600BA357D /* HitHatClosed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F41B963AC600BA357D /* HitHatClosed.wav */; };
-		778A16FE1B963AC600BA357D /* Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F51B963AC600BA357D /* Kick.wav */; };
-		778A16FF1B963AC600BA357D /* LoCrash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F61B963AC600BA357D /* LoCrash.wav */; };
-		778A17001B963AC600BA357D /* Ride.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F71B963AC600BA357D /* Ride.wav */; };
-		778A17011B963AC600BA357D /* Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F81B963AC600BA357D /* Snare.wav */; };
-		778A17021B963AC600BA357D /* Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 778A16F91B963AC600BA357D /* Tom.wav */; };
 		778A17041B963C8A00BA357D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778A17031B963C8A00BA357D /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7775A9921BA4DBFD00B8DF8A /* Floor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Floor.wav; path = Sampler/Paramore/Floor.wav; sourceTree = "<group>"; };
+		7775A9931BA4DBFD00B8DF8A /* HiCrash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HiCrash.wav; path = Sampler/Paramore/HiCrash.wav; sourceTree = "<group>"; };
+		7775A9941BA4DBFD00B8DF8A /* HiHatOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HiHatOpen.wav; path = Sampler/Paramore/HiHatOpen.wav; sourceTree = "<group>"; };
+		7775A9951BA4DBFD00B8DF8A /* HitHatClosed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HitHatClosed.wav; path = Sampler/Paramore/HitHatClosed.wav; sourceTree = "<group>"; };
+		7775A9961BA4DBFD00B8DF8A /* Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Kick.wav; path = Sampler/Paramore/Kick.wav; sourceTree = "<group>"; };
+		7775A9971BA4DBFD00B8DF8A /* LoCrash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = LoCrash.wav; path = Sampler/Paramore/LoCrash.wav; sourceTree = "<group>"; };
+		7775A9981BA4DBFD00B8DF8A /* Ride.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Ride.wav; path = Sampler/Paramore/Ride.wav; sourceTree = "<group>"; };
+		7775A9991BA4DBFD00B8DF8A /* Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Snare.wav; path = Sampler/Paramore/Snare.wav; sourceTree = "<group>"; };
+		7775A99A1BA4DBFD00B8DF8A /* Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Tom.wav; path = Sampler/Paramore/Tom.wav; sourceTree = "<group>"; };
 		778A16B71B96390100BA357D /* Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778A16BB1B96390100BA357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778A16BC1B96390100BA357D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,15 +68,6 @@
 		778A16E41B96393100BA357D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		778A16ED1B9639B000BA357D /* Sampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sampler.h; sourceTree = "<group>"; };
 		778A16EE1B9639B000BA357D /* Sampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sampler.m; sourceTree = "<group>"; };
-		778A16F11B963AC600BA357D /* Floor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Floor.wav; path = ../SamplerCLI/Paramore/Floor.wav; sourceTree = "<group>"; };
-		778A16F21B963AC600BA357D /* HiCrash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HiCrash.wav; path = ../SamplerCLI/Paramore/HiCrash.wav; sourceTree = "<group>"; };
-		778A16F31B963AC600BA357D /* HiHatOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HiHatOpen.wav; path = ../SamplerCLI/Paramore/HiHatOpen.wav; sourceTree = "<group>"; };
-		778A16F41B963AC600BA357D /* HitHatClosed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = HitHatClosed.wav; path = ../SamplerCLI/Paramore/HitHatClosed.wav; sourceTree = "<group>"; };
-		778A16F51B963AC600BA357D /* Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Kick.wav; path = ../SamplerCLI/Paramore/Kick.wav; sourceTree = "<group>"; };
-		778A16F61B963AC600BA357D /* LoCrash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = LoCrash.wav; path = ../SamplerCLI/Paramore/LoCrash.wav; sourceTree = "<group>"; };
-		778A16F71B963AC600BA357D /* Ride.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Ride.wav; path = ../SamplerCLI/Paramore/Ride.wav; sourceTree = "<group>"; };
-		778A16F81B963AC600BA357D /* Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Snare.wav; path = ../SamplerCLI/Paramore/Snare.wav; sourceTree = "<group>"; };
-		778A16F91B963AC600BA357D /* Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Tom.wav; path = ../SamplerCLI/Paramore/Tom.wav; sourceTree = "<group>"; };
 		778A17031B963C8A00BA357D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -172,15 +172,15 @@
 		778A16F01B963ABB00BA357D /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				778A16F11B963AC600BA357D /* Floor.wav */,
-				778A16F21B963AC600BA357D /* HiCrash.wav */,
-				778A16F31B963AC600BA357D /* HiHatOpen.wav */,
-				778A16F41B963AC600BA357D /* HitHatClosed.wav */,
-				778A16F51B963AC600BA357D /* Kick.wav */,
-				778A16F61B963AC600BA357D /* LoCrash.wav */,
-				778A16F71B963AC600BA357D /* Ride.wav */,
-				778A16F81B963AC600BA357D /* Snare.wav */,
-				778A16F91B963AC600BA357D /* Tom.wav */,
+				7775A9921BA4DBFD00B8DF8A /* Floor.wav */,
+				7775A9931BA4DBFD00B8DF8A /* HiCrash.wav */,
+				7775A9941BA4DBFD00B8DF8A /* HiHatOpen.wav */,
+				7775A9951BA4DBFD00B8DF8A /* HitHatClosed.wav */,
+				7775A9961BA4DBFD00B8DF8A /* Kick.wav */,
+				7775A9971BA4DBFD00B8DF8A /* LoCrash.wav */,
+				7775A9981BA4DBFD00B8DF8A /* Ride.wav */,
+				7775A9991BA4DBFD00B8DF8A /* Snare.wav */,
+				7775A99A1BA4DBFD00B8DF8A /* Tom.wav */,
 			);
 			name = Samples;
 			sourceTree = "<group>";
@@ -265,17 +265,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				778A16FD1B963AC600BA357D /* HitHatClosed.wav in Resources */,
-				778A17011B963AC600BA357D /* Snare.wav in Resources */,
-				778A16FA1B963AC600BA357D /* Floor.wav in Resources */,
+				7775A99C1BA4DBFD00B8DF8A /* HiCrash.wav in Resources */,
+				7775A9A11BA4DBFD00B8DF8A /* Ride.wav in Resources */,
 				778A16C51B96390100BA357D /* Images.xcassets in Resources */,
-				778A16FE1B963AC600BA357D /* Kick.wav in Resources */,
-				778A17021B963AC600BA357D /* Tom.wav in Resources */,
+				7775A9A31BA4DBFD00B8DF8A /* Tom.wav in Resources */,
+				7775A99F1BA4DBFD00B8DF8A /* Kick.wav in Resources */,
+				7775A9A01BA4DBFD00B8DF8A /* LoCrash.wav in Resources */,
+				7775A99E1BA4DBFD00B8DF8A /* HitHatClosed.wav in Resources */,
 				778A16C81B96390100BA357D /* Main.storyboard in Resources */,
-				778A16FB1B963AC600BA357D /* HiCrash.wav in Resources */,
-				778A16FC1B963AC600BA357D /* HiHatOpen.wav in Resources */,
-				778A16FF1B963AC600BA357D /* LoCrash.wav in Resources */,
-				778A17001B963AC600BA357D /* Ride.wav in Resources */,
+				7775A99B1BA4DBFD00B8DF8A /* Floor.wav in Resources */,
+				7775A9A21BA4DBFD00B8DF8A /* Snare.wav in Resources */,
+				7775A99D1BA4DBFD00B8DF8A /* HiHatOpen.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

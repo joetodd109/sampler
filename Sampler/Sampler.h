@@ -13,6 +13,7 @@
 
 @interface Sampler : NSObject
 
+-(void)playSample:(NSString *) drum amplitude:(float) volume;
 -(void)loadSamples;
 -(void)setupMIDI;
 

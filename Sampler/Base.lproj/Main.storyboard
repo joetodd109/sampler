@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
@@ -669,57 +669,142 @@
             <objects>
                 <viewController storyboardIdentifier="main" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="310"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-JL-qeX">
-                                <rect key="frame" x="51" y="20" width="120" height="115"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="uPs-mP-mwf"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQr-8c-OND">
-                                <rect key="frame" x="51" y="20" width="120" height="115"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="VdG-um-gKV"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-NZ-pGP">
-                                <rect key="frame" x="45" y="154" width="77" height="72"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="Il9-Bt-DmF"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2a-NP-gEl">
-                                <rect key="frame" x="157" y="143" width="65" height="65"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="4d3-bJ-8h8"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dt6-Th-kbH">
-                                <rect key="frame" x="157" y="143" width="65" height="65"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="6jg-gQ-Eve"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-S4-ggq">
-                                <rect key="frame" x="204" y="55" width="73" height="70"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOff" id="xww-TG-dQE"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrI-mM-mPx">
-                                <rect key="frame" x="204" y="55" width="73" height="70"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="Xxx-Uh-Hla"/>
-                            </imageView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fm-4g-603">
-                                <rect key="frame" x="45" y="154" width="77" height="72"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DrumOn" id="ou0-Z0-lAs"/>
-                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCO-Xz-1v4">
+                                <rect key="frame" x="327" y="71" width="125" height="22"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="~/Music/Samples" bezelStyle="round" id="84e-dl-Jsu">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8W-95-fYx">
+                                <rect key="frame" x="131" y="20" width="161" height="153"/>
+                                <animations/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="ubu-Ka-REe">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="kickPush:" target="XfG-lQ-9wD" id="oVe-4j-6YY"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-MY-Y3Q">
+                                <rect key="frame" x="20" y="83" width="103" height="90"/>
+                                <animations/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="Axw-jI-54x">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="snarePush:" target="XfG-lQ-9wD" id="eld-Xj-YSJ"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHK-Kc-ygi">
+                                <rect key="frame" x="75" y="192" width="79" height="74"/>
+                                <animations/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="Oho-Vy-Oze">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="hiHatPush:" target="XfG-lQ-9wD" id="rYQ-Pr-BYZ"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-sc-b3B">
+                                <rect key="frame" x="336" y="258" width="67" height="32"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="60" id="8wm-UR-Qj7">
+                                    <font key="font" metaFont="system" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEo-W1-hv8">
+                                <rect key="frame" x="325" y="231" width="129" height="21"/>
+                                <animations/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="60" maxValue="180" doubleValue="120" tickMarkPosition="above" sliderType="linear" id="6O7-n2-VHH"/>
+                                <connections>
+                                    <action selector="bpmChange:" target="XfG-lQ-9wD" id="79J-yp-vvD"/>
+                                </connections>
+                            </slider>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaA-QI-suU">
+                                <rect key="frame" x="325" y="132" width="55" height="34"/>
+                                <animations/>
+                                <buttonCell key="cell" type="bevel" title="LOOP" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wFO-et-hjA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-tl-fIM">
+                                <rect key="frame" x="399" y="132" width="55" height="34"/>
+                                <animations/>
+                                <buttonCell key="cell" type="bevel" title="STOP" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IEv-hv-exJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beN-hE-nhh">
+                                <rect key="frame" x="325" y="34" width="55" height="31"/>
+                                <animations/>
+                                <buttonCell key="cell" type="bevel" title="Back" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W6p-Zc-4WN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="goBack:" target="XfG-lQ-9wD" id="m44-UG-Dhl"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xab-Lu-dNK">
+                                <rect key="frame" x="399" y="34" width="55" height="31"/>
+                                <animations/>
+                                <buttonCell key="cell" type="bevel" title="Next" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IRJ-gL-2bP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="goNext:" target="XfG-lQ-9wD" id="zKQ-IB-MYN"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTa-bf-r0j">
+                                <rect key="frame" x="-19752" y="-19773" width="10000" height="40004"/>
+                                <animations/>
+                                <buttonCell key="cell" type="inline" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="hWz-WZ-FWd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-FI-DAN">
+                                <rect key="frame" x="407" y="266" width="38" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="BPM" id="oOm-Um-LJ6">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <animations/>
                     </view>
                     <connections>
-                        <outlet property="floor" destination="2yo-S4-ggq" id="M21-DO-j0w"/>
-                        <outlet property="floorOn" destination="qrI-mM-mPx" id="zrH-Rl-t3u"/>
-                        <outlet property="kick" destination="AQ3-JL-qeX" id="AIf-g3-kYS"/>
-                        <outlet property="kickOn" destination="eQr-8c-OND" id="Luu-Ci-fS3"/>
-                        <outlet property="snare" destination="9Fm-4g-603" id="AMg-cK-du8"/>
-                        <outlet property="snareOn" destination="9Fm-4g-603" id="0NP-w1-cJP"/>
-                        <outlet property="tom" destination="l2a-NP-gEl" id="73X-Fk-mxd"/>
-                        <outlet property="tomOn" destination="Dt6-Th-kbH" id="YMe-H9-dQF"/>
+                        <outlet property="backButton" destination="beN-hE-nhh" id="Tdt-mJ-3Sd"/>
+                        <outlet property="bpmLabel" destination="N7b-sc-b3B" id="0lj-XV-cJL"/>
+                        <outlet property="bpmSlider" destination="EEo-W1-hv8" id="pbj-2m-4G3"/>
+                        <outlet property="hiHatButton" destination="FHK-Kc-ygi" id="uhx-8l-eid"/>
+                        <outlet property="kickButton" destination="B8W-95-fYx" id="h6N-uW-Ve1"/>
+                        <outlet property="loopButton" destination="yaA-QI-suU" id="rTp-9B-3Nx"/>
+                        <outlet property="nextButton" destination="Xab-Lu-dNK" id="EkX-Ll-Pgz"/>
+                        <outlet property="pathViewer" destination="bCO-Xz-1v4" id="m8v-Ve-j3U"/>
+                        <outlet property="snareButton" destination="yAe-MY-Y3Q" id="K5Q-QY-6cQ"/>
+                        <outlet property="stopButton" destination="JbE-tl-fIM" id="lZA-BP-8Vq"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="657"/>
+            <point key="canvasLocation" x="81" y="677"/>
         </scene>
     </scenes>
     <resources>

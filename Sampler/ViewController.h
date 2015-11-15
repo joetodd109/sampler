@@ -12,14 +12,18 @@
 
 @interface ViewController : NSViewController
 
-@property (strong) IBOutlet NSImageView *kick;
-@property (strong) IBOutlet NSImageView *kickOn;
-@property (strong) IBOutlet NSImageView *snare;
-@property (strong) IBOutlet NSImageView *snareOn;
-@property (strong) IBOutlet NSImageView *tom;
-@property (strong) IBOutlet NSImageView *tomOn;
-@property (strong) IBOutlet NSImageView *floor;
-@property (strong) IBOutlet NSImageView *floorOn;
+@property (strong) IBOutlet NSButton *backButton;
+@property (strong) IBOutlet NSButton *nextButton;
+@property (strong) IBOutlet NSTextField *pathViewer;
+
+@property (strong) IBOutlet NSTextField *bpmLabel;
+@property (strong) IBOutlet NSSlider *bpmSlider;
+@property (strong) IBOutlet NSButton *loopButton;
+@property (strong) IBOutlet NSButton *stopButton;
+
+@property (strong) IBOutlet NSButton *kickButton;
+@property (strong) IBOutlet NSButton *snareButton;
+@property (strong) IBOutlet NSButton *hiHatButton;
 
 @end
 
