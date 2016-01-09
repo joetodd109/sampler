@@ -18,8 +18,10 @@
 
 @property (strong) IBOutlet NSTextField *bpmLabel;
 @property (strong) IBOutlet NSSlider *bpmSlider;
+@property (strong) IBOutlet NSButton *bpmButton;
 @property (strong) IBOutlet NSButton *loopButton;
 @property (strong) IBOutlet NSButton *stopButton;
+@property (strong) IBOutlet NSButton *clearButton;
 
 @property (strong) IBOutlet NSButton *kickButton;
 @property (strong) IBOutlet NSButton *snareButton;

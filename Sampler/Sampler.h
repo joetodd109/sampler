@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import <CoreFoundation/CoreFoundation.h>
 #import <CoreMIDI/CoreMIDI.h>
 
@@ -15,6 +16,8 @@
 
 -(void)playSample:(NSString *) drum amplitude:(float) volume;
 -(void)loadSamples;
--(void)setupMIDI;
+-(void)setupTimer;
+-(int)setupMIDI;
+-(int)setupLooper;
 
 @end

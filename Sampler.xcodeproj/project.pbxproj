@@ -16,6 +16,7 @@
 		7775A9A11BA4DBFD00B8DF8A /* Ride.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9981BA4DBFD00B8DF8A /* Ride.wav */; };
 		7775A9A21BA4DBFD00B8DF8A /* Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A9991BA4DBFD00B8DF8A /* Snare.wav */; };
 		7775A9A31BA4DBFD00B8DF8A /* Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7775A99A1BA4DBFD00B8DF8A /* Tom.wav */; };
+		777C70E31C00BA3C00101908 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777C70E21C00BA3C00101908 /* AudioToolbox.framework */; };
 		778A16BE1B96390100BA357D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BD1B96390100BA357D /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		778A16C01B96390100BA357D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16BF1B96390100BA357D /* main.m */; };
 		778A16C31B96390100BA357D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16C21B96390100BA357D /* ViewController.m */; };
@@ -50,6 +51,7 @@
 		7775A9981BA4DBFD00B8DF8A /* Ride.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Ride.wav; path = Sampler/Paramore/Ride.wav; sourceTree = "<group>"; };
 		7775A9991BA4DBFD00B8DF8A /* Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Snare.wav; path = Sampler/Paramore/Snare.wav; sourceTree = "<group>"; };
 		7775A99A1BA4DBFD00B8DF8A /* Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Tom.wav; path = Sampler/Paramore/Tom.wav; sourceTree = "<group>"; };
+		777C70E21C00BA3C00101908 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		778A16B71B96390100BA357D /* Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		778A16BB1B96390100BA357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778A16BC1B96390100BA357D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777C70E31C00BA3C00101908 /* AudioToolbox.framework in Frameworks */,
 				778A17041B963C8A00BA357D /* AppKit.framework in Frameworks */,
 				778A16E51B96393100BA357D /* Foundation.framework in Frameworks */,
 				778A16E31B96392D00BA357D /* CoreFoundation.framework in Frameworks */,
@@ -159,6 +162,7 @@
 		778A16DD1B96391600BA357D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				777C70E21C00BA3C00101908 /* AudioToolbox.framework */,
 				778A17031B963C8A00BA357D /* AppKit.framework */,
 				778A16E41B96393100BA357D /* Foundation.framework */,
 				778A16E21B96392D00BA357D /* CoreFoundation.framework */,

@@ -22,12 +22,12 @@ Sampler *sampler;
 - (void)
 applicationDidFinishLaunching:(NSNotification *)aNotification
 {    
-    NSLog(@"MIDI Sampler..");
+    NSLog(@"MIDI Sampler!");
     sampler = [[Sampler alloc] init];
-    
     [sampler loadSamples];
     [sampler setupMIDI];
-    
+    [sampler setupLooper];
+    [sampler setupTimer];
 
 }
 
@@ -36,8 +36,6 @@ applicationWillTerminate:(NSNotification *)aNotification
 {
     
 }
-
-
 
 
 @end

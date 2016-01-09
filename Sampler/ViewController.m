@@ -27,7 +27,8 @@ viewDidLoad
     len = [folders count];
     [_pathViewer setStringValue:folders[idx]];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hitCallback:) name:@"drumHit" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hitCallback:) name:@"drumShow" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (bpmFlash) name:@"bpmHit" object:nil];
 }
 
 -(void)
@@ -85,6 +86,15 @@ arrayOfFoldersInFolder:(NSString*) folder
     return directoryList;
 }
 
+-(void)
+bpmFlash
+{
+    [_bpmButton highlight:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [_bpmButton highlight:NO];
+    });
+}
+
 - (IBAction)goBack:(id)sender {
     idx = (idx - 1) % len;
 }
@@ -97,18 +107,35 @@ arrayOfFoldersInFolder:(NSString*) folder
     int bpm = [_bpmSlider intValue];
     NSString* bpmString = [NSString stringWithFormat:@"%i", bpm];
     [_bpmLabel setStringValue: bpmString];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"changeTimer" object:bpmString];
 }
 
+- (IBAction)setLoop:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setLoop" object:nil];
+}
+
+- (IBAction)playStop:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"playStop" object:nil];
+}
+
+- (IBAction)clearTrack:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"clearTrack" object:nil];
+}
+
+
 - (IBAction)kickPush:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumClick" object:@"Kick"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addEvent" object:@"Kick"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumPlay" object:@"Kick"];
 }
 
 - (IBAction)snarePush:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumClick" object:@"Snare"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addEvent" object:@"Snare"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumPlay" object:@"Snare"];
 }
 
 - (IBAction)hiHatPush:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumClick" object:@"HiHat"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addEvent" object:@"HiHat"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"drumPlay" object:@"HiHat"];
 }
 
 @end
