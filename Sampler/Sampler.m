@@ -59,7 +59,7 @@ midiInputCallback (const MIDIPacketList *list, void *procRef, void *srcRef)
     const MIDIPacket *packet = &list->packet[0];
     uint8_t command = packet->data[0];
     //float volume = packet->data[2] / 128.0;
-    //NSLog(@"note = %d, velocity = %d", packet->data[1], packet->data[2]);
+    NSLog(@"note = %d, velocity = %d", packet->data[1], packet->data[2]);
     
     if ((command & 240) == 144)  {
         NSUInteger length = [samples count];
@@ -453,6 +453,70 @@ setupLooper
     NSLog(@"Created Looper successfully.");
     
     return 0;
+}
+
+-(void)
+setupSerial
+{
+    self.serialPort = [ORSSerialPort serialPortWithPath:@"/dev/cu.wch ch341 USB=>RS232 1410"];
+    self.serialPort.baudRate = @115200;
+    self.serialPort.parity = ORSSerialPortParityNone;
+    self.serialPort.numberOfStopBits = 1;
+    self.serialPort.usesRTSCTSFlowControl = NO;
+    self.serialPort.delegate = self;
+    [self.serialPort open];
+}
+
+- (void)serialPortWasOpened:(ORSSerialPort *)serialPort
+{
+    NSLog(@"Opened serial port successfully");
+}
+
+- (void)serialPortWasRemovedFromSystem:(ORSSerialPort *)serialPort
+{
+    self.serialPort = nil;
+}
+
+- (void)serialPort:(ORSSerialPort *)serialPort didReceiveData:(NSData *)data
+{
+    NSString *drumString = @"";
+    const unsigned char *bytes = [data bytes];
+    NSInteger note = [NSString stringWithFormat:@"%d", bytes[1]].integerValue;
+    NSInteger velo = [NSString stringWithFormat:@"%d", bytes[2]].integerValue;
+    
+    switch (note) {
+        case KICK:
+            drumString = @"Kick";
+            break;
+        case SNARE:
+            drumString = @"Snare";
+            break;
+        case TOM:
+            drumString = @"Tom";
+            break;
+        case FLOOR:
+            drumString = @"Floor";
+            break;
+        case HIHAT:
+            drumString = @"HiHat";
+            break;
+        case CRASH:
+            drumString = @"Crash";
+            break;
+        default:
+            NSLog(@"Serial message not recognised");
+            break;
+    }
+    
+    if (drumString.length != 0) {
+        // Play sound
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"drumPlay" object:drumString];
+        // Add MIDI event to looper
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"addEvent" object:drumString];
+        
+        // Show drum hit
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"drumShow" object:drumString];
+    }
 }
 
 /*

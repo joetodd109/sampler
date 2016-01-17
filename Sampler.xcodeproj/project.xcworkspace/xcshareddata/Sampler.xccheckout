@@ -10,6 +10,8 @@
 	<string>Sampler</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>5A811E91F5DFF59170683E14D2C5755F19DE18CB</key>
+		<string>https://github.com/armadsen/ORSSerialPort.git</string>
 		<key>E4FE8E1E1B1FC3C566D6FA5BD23D8DE971AD2930</key>
 		<string>https://github.com/joetodd109/sampler.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Sampler.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>5A811E91F5DFF59170683E14D2C5755F19DE18CB</key>
+		<string>../../Frameworks/ORSSerialPort/</string>
 		<key>E4FE8E1E1B1FC3C566D6FA5BD23D8DE971AD2930</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>E4FE8E1E1B1FC3C566D6FA5BD23D8DE971AD2930</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5A811E91F5DFF59170683E14D2C5755F19DE18CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ORSSerialPort</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

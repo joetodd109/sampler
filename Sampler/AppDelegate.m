@@ -28,6 +28,7 @@ applicationDidFinishLaunching:(NSNotification *)aNotification
     [sampler setupMIDI];
     [sampler setupLooper];
     [sampler setupTimer];
+    [sampler setupSerial];
 
 }
 

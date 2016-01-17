@@ -29,6 +29,8 @@
 		778A16E51B96393100BA357D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778A16E41B96393100BA357D /* Foundation.framework */; };
 		778A16EF1B9639B000BA357D /* Sampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 778A16EE1B9639B000BA357D /* Sampler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		778A17041B963C8A00BA357D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778A17031B963C8A00BA357D /* AppKit.framework */; };
+		77DA265A1C4BFDA30066F258 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DA26571C4BFD9E0066F258 /* ORSSerial.framework */; };
+		77DA265C1C4C061B0066F258 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DA265B1C4C061B0066F258 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 778A16B61B96390100BA357D;
 			remoteInfo = Sampler;
+		};
+		77DA26561C4BFD9E0066F258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77DA26511C4BFD9E0066F258 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		77DA26581C4BFD9E0066F258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77DA26511C4BFD9E0066F258 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -71,6 +87,8 @@
 		778A16ED1B9639B000BA357D /* Sampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sampler.h; sourceTree = "<group>"; };
 		778A16EE1B9639B000BA357D /* Sampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sampler.m; sourceTree = "<group>"; };
 		778A17031B963C8A00BA357D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		77DA26511C4BFD9E0066F258 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		77DA265B1C4C061B0066F258 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DA265C1C4C061B0066F258 /* IOKit.framework in Frameworks */,
+				77DA265A1C4BFDA30066F258 /* ORSSerial.framework in Frameworks */,
 				777C70E31C00BA3C00101908 /* AudioToolbox.framework in Frameworks */,
 				778A17041B963C8A00BA357D /* AppKit.framework in Frameworks */,
 				778A16E51B96393100BA357D /* Foundation.framework in Frameworks */,
@@ -162,6 +182,8 @@
 		778A16DD1B96391600BA357D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77DA265B1C4C061B0066F258 /* IOKit.framework */,
+				77DA26511C4BFD9E0066F258 /* ORSSerialPort.xcodeproj */,
 				777C70E21C00BA3C00101908 /* AudioToolbox.framework */,
 				778A17031B963C8A00BA357D /* AppKit.framework */,
 				778A16E41B96393100BA357D /* Foundation.framework */,
@@ -187,6 +209,15 @@
 				7775A99A1BA4DBFD00B8DF8A /* Tom.wav */,
 			);
 			name = Samples;
+			sourceTree = "<group>";
+		};
+		77DA26521C4BFD9E0066F258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77DA26571C4BFD9E0066F258 /* ORSSerial.framework */,
+				77DA26591C4BFD9E0066F258 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +287,12 @@
 			mainGroup = 778A16AE1B96390100BA357D;
 			productRefGroup = 778A16B81B96390100BA357D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 77DA26521C4BFD9E0066F258 /* Products */;
+					ProjectRef = 77DA26511C4BFD9E0066F258 /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				778A16B61B96390100BA357D /* Sampler */,
@@ -263,6 +300,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		77DA26571C4BFD9E0066F258 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 77DA26561C4BFD9E0066F258 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77DA26591C4BFD9E0066F258 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 77DA26581C4BFD9E0066F258 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		778A16B51B96390100BA357D /* Resources */ = {

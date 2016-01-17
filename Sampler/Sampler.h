@@ -11,6 +11,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreFoundation/CoreFoundation.h>
 #import <CoreMIDI/CoreMIDI.h>
+#import <ORSSerial/ORSSerial.h>
 
 @interface Sampler : NSObject
 
@@ -19,5 +20,8 @@
 -(void)setupTimer;
 -(int)setupMIDI;
 -(int)setupLooper;
+-(void)setupSerial;
+
+@property (nonatomic, strong) ORSSerialPort *serialPort;
 
 @end
