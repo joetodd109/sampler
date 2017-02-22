@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <deployment version="101000" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -668,13 +669,15 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="main" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="310"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCO-Xz-1v4">
                                 <rect key="frame" x="327" y="65" width="125" height="22"/>
-                                <animations/>
+                                <shadow key="shadow">
+                                    <color key="color" red="0.53445573710000005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="~/Music/Samples" bezelStyle="round" id="84e-dl-Jsu">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -683,7 +686,6 @@
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8W-95-fYx">
                                 <rect key="frame" x="131" y="20" width="161" height="153"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="ubu-Ka-REe">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -694,7 +696,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAe-MY-Y3Q">
                                 <rect key="frame" x="20" y="83" width="103" height="90"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="Axw-jI-54x">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -705,7 +706,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHK-Kc-ygi">
                                 <rect key="frame" x="75" y="192" width="79" height="74"/>
-                                <animations/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="DrumOff" imagePosition="overlaps" alignment="center" alternateImage="DrumOn" state="on" imageScaling="proportionallyDown" inset="2" id="Oho-Vy-Oze">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -716,7 +716,6 @@
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-sc-b3B">
                                 <rect key="frame" x="336" y="258" width="67" height="34"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="120" id="8wm-UR-Qj7">
                                     <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -725,7 +724,6 @@
                             </textField>
                             <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEo-W1-hv8">
                                 <rect key="frame" x="325" y="231" width="129" height="21"/>
-                                <animations/>
                                 <sliderCell key="cell" state="on" alignment="left" minValue="60" maxValue="180" doubleValue="120" tickMarkPosition="above" sliderType="linear" id="6O7-n2-VHH"/>
                                 <connections>
                                     <action selector="bpmChange:" target="XfG-lQ-9wD" id="79J-yp-vvD"/>
@@ -733,7 +731,6 @@
                             </slider>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaA-QI-suU">
                                 <rect key="frame" x="325" y="143" width="55" height="34"/>
-                                <animations/>
                                 <buttonCell key="cell" type="bevel" title="LOOP" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wFO-et-hjA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="10"/>
@@ -744,7 +741,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-tl-fIM">
                                 <rect key="frame" x="399" y="143" width="55" height="34"/>
-                                <animations/>
                                 <buttonCell key="cell" type="bevel" title="STOP" alternateTitle="PLAY" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IEv-hv-exJ">
                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system" size="10"/>
@@ -755,7 +751,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beN-hE-nhh">
                                 <rect key="frame" x="325" y="28" width="55" height="31"/>
-                                <animations/>
                                 <buttonCell key="cell" type="bevel" title="Back" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W6p-Zc-4WN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="10"/>
@@ -766,7 +761,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xab-Lu-dNK">
                                 <rect key="frame" x="399" y="28" width="55" height="31"/>
-                                <animations/>
                                 <buttonCell key="cell" type="bevel" title="Next" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IRJ-gL-2bP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="10"/>
@@ -775,17 +769,8 @@
                                     <action selector="goNext:" target="XfG-lQ-9wD" id="zKQ-IB-MYN"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTa-bf-r0j">
-                                <rect key="frame" x="-19752" y="-19773" width="10000" height="40004"/>
-                                <animations/>
-                                <buttonCell key="cell" type="inline" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="hWz-WZ-FWd">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="smallSystemBold"/>
-                                </buttonCell>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-FI-DAN">
                                 <rect key="frame" x="407" y="266" width="38" height="17"/>
-                                <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="BPM" id="oOm-Um-LJ6">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -794,7 +779,6 @@
                             </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ai5-LM-E3Q">
                                 <rect key="frame" x="370" y="189" width="39" height="38"/>
-                                <animations/>
                                 <buttonCell key="cell" type="round" bezelStyle="circular" imagePosition="above" alignment="left" alternateImage="NSColorPanel" borderStyle="border" imageScaling="proportionallyDown" sound="Pop" id="mVs-6b-RQH">
                                     <behavior key="behavior" lightByContents="YES"/>
                                     <font key="font" metaFont="label"/>
@@ -802,7 +786,6 @@
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svt-8e-q5J">
                                 <rect key="frame" x="362" y="103" width="57" height="34"/>
-                                <animations/>
                                 <buttonCell key="cell" type="bevel" title="CLEAR" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uwE-l5-mc8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="10"/>
@@ -812,7 +795,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="beN-hE-nhh" id="Tdt-mJ-3Sd"/>
